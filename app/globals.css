@@ -22,7 +22,7 @@ body {
 }
 
 .navbar {
-  background: #0f172a;
+  background: #0800ff;
   color: white;
   padding: 14px 24px;
 }
@@ -57,7 +57,9 @@ body {
 }
 
 .nav-links a:hover {
-  color: #38bdf8;
+  color: #ff0000;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .btn-register {
@@ -137,11 +139,17 @@ body {
 }
 
 .footer {
-  background: #0f172a;
-  color: white;
-  text-align: center;
+  background: #96b6ff;
+  color: black;
+  text-align: left;
   padding: 18px;
 }
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 
 @media (max-width: 768px) {
   .menu-btn {

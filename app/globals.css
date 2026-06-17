@@ -23,7 +23,7 @@ body {
 
 .navbar {
   background: #0800ff;
-  color: white;
+  color: rgb(255, 255, 255);
   padding: 14px 24px;
 }
 
@@ -36,7 +36,7 @@ body {
 }
 
 .logo {
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 24px;
   font-weight: bold;
   text-decoration: none;
@@ -52,7 +52,7 @@ body {
 }
 
 .nav-links a {
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
 
@@ -60,6 +60,9 @@ body {
   color: #ff0000;
   font-weight: bold;
   font-size: 18px;
+  background: #266b06;
+  padding: 14px 18px;
+  border-radius: 8px;
 }
 
 .btn-register {
@@ -85,7 +88,7 @@ body {
   display: none;
   background: none;
   border: none;
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 26px;
 }
 
@@ -163,7 +166,7 @@ body {
     right: 20px;
     flex-direction: column;
     align-items: flex-start;
-    background: #1e293b;
+    background: #003300;
     padding: 18px;
     width: 230px;
     border-radius: 12px;

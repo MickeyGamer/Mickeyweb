@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-
+99
 const UserSchema = new mongoose.Schema(
   {
     name: String,

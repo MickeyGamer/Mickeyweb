@@ -22,6 +22,7 @@ export default function Register() {
     });
 
     if (res.ok) {
+      alert("Register successful");
       router.push("/login");
     } else {
       alert("Register failed");

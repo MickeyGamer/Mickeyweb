@@ -22,7 +22,7 @@ export default function Register() {
     });
 
     if (res.ok) {
-      alert("Register successful");
+      alert("ลงทะเบียนสําเร็จ กรุณาเข้าสู่ระบบ");
       router.push("/login");
     } else {
       alert("Register failed");

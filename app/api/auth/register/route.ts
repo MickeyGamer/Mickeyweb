@@ -29,7 +29,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ message: "Register success" });
   } catch {
     return NextResponse.json(
-      { message: "Register failed" },
+      { message: "Register failed, Please Try Again Later..." },
       { status: 500 }
     );
   }

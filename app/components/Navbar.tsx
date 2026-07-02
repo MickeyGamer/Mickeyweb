@@ -85,11 +85,6 @@ export default function Navbar() {
                         </>
                     ) : (
                         <>
-
-                            <li>
-                                <Link href="/profile">Profile</Link>
-                            </li>
-
                             <li className="user-info">
                                 ชื่อ : {user.name} ระดับสิทธิ : {user.role}
                             </li>

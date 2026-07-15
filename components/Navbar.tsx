@@ -69,9 +69,19 @@ export default function Navbar() {
                     )}
 
                     {user?.role === "admin" && (
-                        <li>
-                            <Link href="/admin/users">Admin</Link>
-                        </li>
+                        <>
+                            <li>
+                                <Link href="/admin/users">Admin</Link>
+                            </li>
+
+                            <li>
+                                <Link href="/admin/categories">Category</Link>
+                            </li>
+
+                            <li>
+                                <Link href="/admin/products">Product</Link>
+                            </li>
+                        </>
                     )}
 
                     {!user ? (
@@ -88,7 +98,7 @@ export default function Navbar() {
                             <li className="user-info">
                                 ชื่อ : {user.name} ระดับสิทธิ : {user.role}
                             </li>
-                            
+
                             <li>
                                 <button onClick={logout} className="btn-logout">
                                     Logout

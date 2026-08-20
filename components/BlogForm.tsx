@@ -55,7 +55,7 @@ export default function BlogForm() {
             setMessage(
                 error instanceof Error
                     ? error.message
-                    : "เกิดข้อผิดพลาด"
+                    : "❌ เกิดข้อผิดพลาด ❌"
             );
         } finally {
             setSubmitting(false);
@@ -66,12 +66,13 @@ export default function BlogForm() {
     return (
         <div className="page">
             <div className="card">
-                <h1> เพิ่มบทความ</h1>
-                    {message && (
-                        <p>
-                            {message}
-                        </p>
-                    )}
+                <h1> เพิ่มบทความ </h1>
+                {message && (
+                    <p>
+                        {message}
+                    </p>
+                )}
+
                 <form onSubmit={handleSubmit}>
                     <label>หัวข้อเรื่อง</label>
                     <input
@@ -87,8 +88,9 @@ export default function BlogForm() {
                     <input
                         type="text"
                         value={slug}
-                        onChange={(event) => setSlug(event.target.value)}
-                        className="w-full rounded-lg border px-3 py-2"
+                        onChange={(event) =>
+                            setSlug(event.target.value)
+                        }
                         required
                     />
 
@@ -98,7 +100,6 @@ export default function BlogForm() {
                         onChange={(event) =>
                             setContent(event.target.value)
                         }
-                        className="w-full rounded-lg border px-3 py-2"
                         placeholder="กรอกเนื้อหา"
                     />
 

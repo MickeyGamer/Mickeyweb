@@ -1,7 +1,5 @@
 "use client";
-
 import Link from "next/link";
-
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
@@ -37,7 +35,6 @@ export default function Navbar() {
         router.refresh();
     }
 
-
     return (
         <nav className="navbar">
             <div className="nav-container">
@@ -54,12 +51,14 @@ export default function Navbar() {
                     <li>
                         <Link href="/" >Home</Link>
                     </li>
-
                     <li>
                         <Link href="/about">About</Link>
                     </li>
                     <li>
                         <Link href="/contact">Contact</Link>
+                    </li>
+                    <li>
+                        <Link href="/blogs">บทความ</Link>
                     </li>
 
                     {user && (
@@ -73,11 +72,9 @@ export default function Navbar() {
                             <li>
                                 <Link href="/admin/blogs">เพิ่มบทความ</Link>
                             </li>
-
                             <li>
                                 <Link href="/admin/categories">Category</Link>
                             </li>
-
                             <li>
                                 <Link href="/admin/products">Product</Link>
                             </li>
@@ -90,15 +87,14 @@ export default function Navbar() {
                                 <Link href="/login">Login</Link>
                             </li>
                             <li>
-                                <Link href="/register">Register</Link>
+                                <Link href="/register"> Register </Link>
                             </li>
                         </>
                     ) : (
                         <>
-                            <li className="user-info">
-                                ชื่อ : {user.name} ระดับสิทธิ : {user.role}
+                            <li>
+                                <Link href="/profile"> {user.name} ({user.role}) </Link>
                             </li>
-
                             <li>
                                 <button onClick={logout} className="btn-logout">
                                     Logout
@@ -106,7 +102,6 @@ export default function Navbar() {
                             </li>
                         </>
                     )}
-
 
                 </ul>
             </div>

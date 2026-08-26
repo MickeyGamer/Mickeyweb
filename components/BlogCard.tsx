@@ -11,7 +11,7 @@ export const dynamic = "force-dynamic";
 
 export default async function BlogsCard() {
 
-    await connectDB();
+  await connectDB();
 
   const blogs = await Blog.find()
     .sort({ createdAt: -1 })
@@ -24,15 +24,15 @@ export default async function BlogsCard() {
     content: String(blog.content ?? ""),
     createdAt: blog.createdAt
       ? new Date(blog.createdAt).toLocaleDateString("th-TH", {
-          day: "numeric",
-          month: "long",
-          year: "numeric",
-        })
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+      })
       : "",
   }));
 
-    return (
-        <main className="mx-auto w-full max-w-7xl px-6 py-10">
+  return (
+    <main className="mx-auto w-full max-w-7xl px-6 py-10">
       <header className="mb-8">
         <p className="mb-2 text-sm font-semibold uppercase tracking-widest text-green-700">
           Blog
@@ -82,5 +82,5 @@ export default async function BlogsCard() {
       )}
     </main>
 
-    );
+  );
 }
